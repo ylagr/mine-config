@@ -1,0 +1,10 @@
+{
+    "last_update":  "2025-07-21T14:09:58.0991937+08:00",
+    "scoop_repo":  "https://gitee.com/scoop-installer/scoop",
+    "scoop_branch":  "master",
+    "url_proxy":  "https://scoop.201704.xyz",
+    "alias":  {
+                  "i":  "scoop-i",
+                  "rm":  "scoop-rm"
+              }
+}
