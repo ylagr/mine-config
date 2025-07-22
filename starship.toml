@@ -1,3 +1,10 @@
+# format = '$all'
+# format = """$all$time\n$character"""
+
+format = """$all$character"""
+# add_newline = false
+add_newline = true
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
@@ -179,6 +186,7 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
+disabled = false
 format = '\[[$time]($style)\]'
 
 [username]
