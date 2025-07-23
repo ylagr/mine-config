@@ -1,6 +1,5 @@
 /*
 # include file 
-!/scoop
 !/nushell
 /nushell/history.txt
 !/starship.toml
