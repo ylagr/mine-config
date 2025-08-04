@@ -18,10 +18,17 @@
 # them for future reference.
 
 
+alias lg = lazygit
+alias gd = git diff
+alias gp = git pull
+alias gr = git rebase
+alias gm = git merge
+alias gf = git fetch
+alias gs = git status
 alias ss = scoop-search
 alias s = scoop
 alias cdu = cd '~/AppData/Roaming'
 alias conf = cd ~/.config/
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+# starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

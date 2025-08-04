@@ -1,6 +1,6 @@
 
-setx EDG_CONFIG_HOME ~/.config
-setx EDG_DATA_HOME ~/.config_data
+setx XDG_CONFIG_HOME ~/.config
+setx XDG_DATA_HOME ~/.configdata
 setx HOME ~
 #### config scoop ing
 https://github.com/lzwme/scoop-proxy-cn
@@ -49,7 +49,7 @@ scoop install scoop-completion
 # config scoop alias
 scoop alias add rm "scoop uninstall $args[0]"
 scoop alias add i "scoop install $args[0]"
-
+scoop alias add u "scoop update $args[0]"
 #### config scoop end
 
 $nu.config-path
@@ -70,3 +70,5 @@ starship preset bracketed-segments -o ~/.config/starship.toml
 https://thejiahao.github.io/zh-cn/posts/starship-setup/
 
 #### 配置nushell  end
+cd ~/.config
+curl https://github.com/kmonad/kmonad/releases/download/0.4.4/kmonad.exe  -o kmonad.exe 
