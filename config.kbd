@@ -16,7 +16,7 @@
 
   ;; For Windows
   input  (low-level-hook)
-  output (send-event-sink 300 15)
+  output (send-event-sink 270 15)
 
   ;; For MacOS
   ;; input  (iokit-name "my-keyboard-product-string")
@@ -46,6 +46,7 @@
 
 (defalias
   capss (tap-next esc sft)
+  capsl (tap-next esc lctl)
   capsc (tap-next esc (layer-toggle numpad))
   num  (tap-macro nlck (layer-switch numpad)) ;; Bind 'num' to numpad Layer
   def  (tap-macro nlck (layer-switch qwerty)) ;; Bind 'def' to qwerty Layer
@@ -57,13 +58,14 @@
   qsy (tap-next ' (layer-toggle symbols))
   sy (tap-next ; (layer-toggle symbols))
   endfen (tap-macro-release end ;)
+  delline (tap-macro-release end (press-only lsft) home (release-only lsft) del)
   )
 
 (deflayer normal
    esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12            prnt    slck    pause
    grv     1    2    @nm3    4    5    6    7    8    9    0    -    =    bspc      ins     home    pgup
    tab     q    w    e    r    t    y    u    _    o    p    [    ]    \         del     end     pgdn
-   @capsc    a    s    d    f    g    h    j    k    l    ;    @qsy    ret
+   @capsl    a    s    d    f    g    h    j    k    l    ;    @qsy    ret
    lsft      z    x    c    v    b    n    m    @pt   @ppt    /    rsft                      up
    lctl    lmet lalt           spc            ralt rmet cmp rctl                left    down    right
   
@@ -71,19 +73,19 @@
 
  (deflayer ctrlpad
    esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12            prnt    slck    pause
-   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc      ins     home    pgup
+   grv     1    pgup  3  pgdn  5    6    7    8    9    0    -    =    bspc      ins     home    pgup
    tab   q  C-bspc  up  C-del  t    y    u    i    o    p    [    ]    \         del     end     pgdn
    lsft  home left down right end   h    j    k    l    ;    '    ret
-   lsft   C-left  del   bspc  C-right b  n   rctl   _   _    rsft    rsft                      up
+   lsft   C-left  del   bspc  C-right @delline  n   rctl   _   _    rsft    rsft                      up
    lctl    app lalt           ret             ralt rmet cmp  rctl                left    down    right
  )
 
  (deflayer altpad
    esc     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12            prnt    slck    pause
-   grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc      ins     home    pgup
+   grv     1    pgup  3  pgdn   5    6    7    8    9    0    -    =    bspc      ins     home    pgup
    tab     q  A-bspc up  A-del  t    y    u    i    o    p    [    ]    \         del     end     pgdn
    lsft   home  left down right end  h    j    k    l    ;    '    ret
-   lsft    A-left del  bspc  A-right b    n   rctl  _    _    rsft    rsft                      up
+   lsft    A-left del  bspc  A-right @delline    n   rctl  _    _    rsft    rsft                      up
    lctl    app lalt           ret             ralt rmet cmp  rctl                left    down    right
  )
 
