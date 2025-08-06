@@ -25,6 +25,7 @@ alias gr = git rebase
 alias gm = git merge
 alias gf = git fetch
 alias gs = git status
+alias gb = git branch
 alias ss = scoop-search
 alias s = scoop
 alias cdu = cd '~/AppData/Roaming'
