@@ -3,6 +3,6 @@
 !/nushell
 /nushell/history.txt
 !/starship.toml
-!cmd
+!cmd.txt
 !.gitignore
 !config.kbd

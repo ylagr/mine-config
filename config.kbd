@@ -58,7 +58,7 @@
   qsy (tap-next ' (layer-toggle symbols))
   sy (tap-next ; (layer-toggle symbols))
   endfen (tap-macro-release end ;)
-  delline (tap-macro-release end (press-only lsft) home (release-only lsft) del)
+  delline (tap-macro-release end (press-only lsft) home (release-only lsft) bspc)
   )
 
 (deflayer normal

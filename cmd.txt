@@ -16,7 +16,7 @@ irm scoop.201704.xyz -outfile 'install.ps1'
 
 # 若已安装官方源，可执行如下命令进行切换
 scoop config SCOOP_REPO "https://gitee.com/scoop-installer/scoop"
-
+scoop config scoop_branch archive
 # 添加 spc bucket
 scoop bucket add spc https://gitee.com/wlzwme/scoop-proxy-cn.git
 
@@ -72,3 +72,7 @@ https://thejiahao.github.io/zh-cn/posts/starship-setup/
 #### 配置nushell  end
 cd ~/.config
 curl https://github.com/kmonad/kmonad/releases/download/0.4.4/kmonad.exe  -o kmonad.exe 
+
+emacs build
+../configure --prefix=/opt/emacs --with-gnutls --with-tree-sitter --with
+cd ~/.fonts/ && git clone https://github.com/scotu/ubuntu-mono-powerline.git && cd ~
