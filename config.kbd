@@ -16,7 +16,7 @@
 
   ;; For Windows
   input  (low-level-hook)
-  output (send-event-sink 270 15)
+  output (send-event-sink 370 18)
 
   ;; For MacOS
   ;; input  (iokit-name "my-keyboard-product-string")
