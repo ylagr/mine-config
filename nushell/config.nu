@@ -26,6 +26,13 @@ alias gm = git merge
 alias gf = git fetch
 alias gs = git status
 alias gb = git branch
+alias gl = git log
+alias g = git
+
+alias ws = winget search
+alias wi = winget install
+alias w = winget
+
 alias ss = scoop-search
 alias s = scoop
 alias cdu = cd '~/AppData/Roaming'
